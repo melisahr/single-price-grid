@@ -1,0 +1,129 @@
+/*Karla Font*/
+@import url('https://fonts.googleapis.com/css2?family=Karla:wght@400;700&display=swap');
+:root{
+    --cyan: hsl(179, 62%, 43%);
+    --bright-yellow: hsl(71, 73%, 54%);
+    --light-gray: hsl(204, 43%, 93%);
+    --grayish-blue: hsl(218, 22%, 67%);
+
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: var(--light-gray);
+    font-size: 16px;
+    font-family: 'Karla', sans-serif;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.container{
+    max-width: 960px;
+}
+.content{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-areas: "a a" "b c";
+    border-radius: 7px;  
+    overflow: hidden;
+    margin: 2rem 1rem;
+}
+.grid{
+    padding: 40px;
+}
+.one{
+    grid-area: a;
+    background-color: #fff;
+}
+h1{
+    color: var(--cyan);
+    font-size: 25px;
+    padding-bottom: 20px;
+}
+.one .days{
+    color: var(--bright-yellow);
+    padding-bottom: 10px;
+    font-weight: 700;
+}
+.one p{
+    color: var(--grayish-blue);
+    line-height: 1.6;
+}
+.two{
+    grid-area: b;
+    background-color: var(--cyan);
+    color: var(--grayish-blue);
+}
+h2{
+    color: var(--light-gray);
+    font-size: 20px;
+    padding-bottom: 18px;
+}
+.two .price{
+    display: flex;
+    align-items: center;
+    padding-bottom: 8px;
+    font-weight: 400;
+}
+
+.two span{
+    font-size: 35px;
+    font-weight: 700;
+    padding-right: 15px;
+}
+
+.two p{
+    color: #fff;
+    padding-bottom: 30px;
+}
+button{
+    background-color: var(--bright-yellow);
+    color: #fff;
+    font-weight: 700;
+    font-size: 15px;
+    padding: 15px 90px;
+    border-radius: .5rem;
+    border: none;
+    cursor: pointer;
+}
+.three{
+    grid-area: c;
+    background-color: hsl(179, 62%, 48%);
+    color: #fff;
+}
+.three h3{
+    color: var(--light-gray);
+    padding-bottom: 20px;
+}
+li{
+    color: var(--light-gray);
+    font-weight: 400;
+    font-size: 14px;
+    list-style: none;
+    padding-bottom: 5px;
+}
+@media only screen and (max-width: 420px){
+    .content{
+        grid-template-columns: repeat(2,1fr);
+        grid-template-areas: "a" "b" "c";
+        overflow: hidden;
+    }
+    .grid{
+        padding: 20px 60px;       
+    }
+    .one p{
+        line-height: 1.8;
+        
+    }
+    .two p{
+        padding-bottom: 20px;
+    }
+    button{
+        padding: 5px 90px;
+        
+    }
+}
