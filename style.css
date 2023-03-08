@@ -22,7 +22,7 @@ body{
     justify-content: center;
 }
 .container{
-    max-width: 960px;
+   max-width: 960px;
 }
 .content{
     display: grid;
@@ -69,26 +69,23 @@ h2{
     padding-bottom: 8px;
     font-weight: 400;
 }
-
 .two span{
     font-size: 35px;
     font-weight: 700;
     padding-right: 15px;
 }
-
 .two p{
     color: #fff;
     padding-bottom: 30px;
 }
 button{
+    width: 100%;
+    padding-block: 15px;
+    font-size: 20px;
     background-color: var(--bright-yellow);
-    color: #fff;
-    font-weight: 700;
-    font-size: 15px;
-    padding: 15px 90px;
-    border-radius: .5rem;
+    color: var(--light-gray);
     border: none;
-    cursor: pointer;
+    border-radius: .5rem;
 }
 .three{
     grid-area: c;
@@ -102,28 +99,18 @@ button{
 li{
     color: var(--light-gray);
     font-weight: 400;
-    font-size: 14px;
+    font-size: 87.5%;
     list-style: none;
-    padding-bottom: 5px;
+    padding-bottom: 2px;
 }
-@media only screen and (max-width: 420px){
+@media screen and (max-width:767px){
+    /*added to center the design*/
+    .container{
+        display: block;        
+    }
     .content{
-        grid-template-columns: repeat(2,1fr);
+        grid-template-columns: repeat(1,1fr);
         grid-template-areas: "a" "b" "c";
         overflow: hidden;
-    }
-    .grid{
-        padding: 20px 60px;       
-    }
-    .one p{
-        line-height: 1.8;
-        
-    }
-    .two p{
-        padding-bottom: 20px;
-    }
-    button{
-        padding: 5px 90px;
-        
     }
 }
